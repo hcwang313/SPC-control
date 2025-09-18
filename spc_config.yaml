@@ -1,0 +1,67 @@
+""" SPC pipeline configuration """
+
+# Paths
+data_root: "C:\\Users\\Hancheng_Wang\\Desktop\\Hancheng\\SPD\\Weekly SPC Monitor Report\\Data"
+result_root: "C:\\Users\\Hancheng_Wang\\Desktop\\Hancheng\\SPD\\Weekly SPC Monitor Report\\Results"
+
+# Global analysis options
+threshold: 20                  # Minimum points required to plot. If fewer, accumulate via memory.
+history_strategy: "fill_to_threshold"  # "fill_to_threshold" or "all"
+y_label_overrides:
+  "CWHP 1310 PL Avg DCA-3 Hancheng1": "PL (nm)"
+  "CWHP final thickness Hancheng1": "Final Thickness (µm)"
+  "CWHP Mesa Final Etch Depth Hancheng1": "Mesa Depth (µm)"
+  "5w1.5BH MesaBOEWidth_2in Hancheng1": "Mesa Width (µm)"
+  "100G EML 475um final thickness Hancheng1": "Final Thickness (µm)"
+  "100G EML 475um Growth PL Hancheng1": "PL (nm)"
+  "100G EML 475um Mesa etch width Hancheng1": "Mesa Width (µm)"
+  "25G RWG 175um final thickness Hancheng1": "Final Thickness (µm)"
+  "25G RWG 175um Growth PL Hancheng1": "PL (nm)"
+  "25G RWG 175um Mesa etch width Hancheng1": "Mesa Width (µm)"
+
+# Products and features
+products:
+  - name: "CWHP 1 mm"
+    data_subdir: "CWHP 1 mm"
+    results_subdir: "CWHP 1 mm"
+    features:
+      - display_name: "CWHP 1310 PL Avg DCA-3 Hancheng1"
+        file_stem: "CWHP 1310 PL Avg DCA-3 Hancheng1"
+        need_ual_lal: false
+      - display_name: "CWHP final thickness Hancheng1"
+        file_stem: "CWHP final thickness Hancheng1"
+        need_ual_lal: false
+      - display_name: "CWHP Mesa Final Etch Depth Hancheng1"
+        file_stem: "CWHP Mesa Final Etch Depth Hancheng1"
+        need_ual_lal: false
+      - display_name: "5w1.5BH MesaBOEWidth_2in Hancheng1"
+        file_stem: "5w1.5BH MesaBOEWidth_2in Hancheng1"
+        need_ual_lal: false
+
+  - name: "100G EML 475um"
+    data_subdir: "100G EML 475 um"
+    results_subdir: "100G EML 475um"
+    features:
+      - display_name: "100G EML 475um final thickness Hancheng1"
+        file_stem: "100G EML 475um final thickness Hancheng1"
+        need_ual_lal: false
+      - display_name: "100G EML 475um Growth PL Hancheng1"
+        file_stem: "100G EML 475um Growth PL Hancheng1"
+        need_ual_lal: false
+      - display_name: "100G EML 475um Mesa etch width Hancheng1"
+        file_stem: "100G EML 475um Mesa etch width Hancheng1"
+        need_ual_lal: false
+
+  - name: "25G RWG 175 um"
+    data_subdir: "25G RWG 175 um"
+    results_subdir: "25G RWG 175 um"
+    features:
+      - display_name: "25G RWG 175um final thickness Hancheng1"
+        file_stem: "25G RWG 175um final thickness Hancheng1"
+        need_ual_lal: false
+      - display_name: "25G RWG 175um Growth PL Hancheng1"
+        file_stem: "25G RWG 175um Growth PL Hancheng1"
+        need_ual_lal: false
+      - display_name: "25G RWG 175um Mesa etch width Hancheng1"
+        file_stem: "25G RWG 175um Mesa etch width Hancheng1"
+        need_ual_lal: false

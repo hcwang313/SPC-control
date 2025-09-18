@@ -1,0 +1,14 @@
+[project]
+name = "weekly-spc"
+version = "0.1.0"
+description = "Weekly SPC monitor project"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "matplotlib",
+    "numpy",
+    "openpyxl",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
